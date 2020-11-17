@@ -1,3 +1,6 @@
+# WSGI 애플리케이션 (함수형)
+
+# WSGI 서버를 실행하기 위해 wsgiref.simple_server 모듈의 make_server 클래스 사용
 from wsgiref.simple_server import make_server
 
 
@@ -21,7 +24,14 @@ def application(environ, start_response):
     return [response_body.encode('utf8')]
 
 
+# make_server 클래스는 다음 3가지를 인자로 받음
+#  1) WSGI 서버가 동작할 호스트 주소
+#  2) 포트
+#  3) PEP333을 준수한 애플리케이션 객체
 httpd = make_server('localhost', 8051, application)
+
+# WSGI 서버를 가동해 웹 브라우저의 요청을 기다리겠다는 메서드를 호출
+# 이 메서드가 실행되고 웹 브라우저의 요청을 받으면 명령을 수행하고 웹 서버를 바로 종료
 httpd.handle_request()
 
 # 웹 브라우저에서 "http://localhost:8051" 로 접속
