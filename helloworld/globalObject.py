@@ -43,3 +43,6 @@ def teardown_request(exception):
     # db 속성값이 None이 아닌 경우, db 속성(데이터베이스 연결 객체)의 close() 메서드를 호출해 데이터베이스 연결 종료
     if db is not None:
         db.close()
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0")

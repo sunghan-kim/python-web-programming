@@ -36,3 +36,11 @@ Flask(import_name, static_url_path, static_folder, template_folder)
 - 프로그램 소스 트리에서 뷰 함수가 사용할 HTML 파일이 위치하는 폴더명을 지정
 - 이 인자는 문자열 값으로 정의
 - 정의하지 않으면 기본값으로 `templates`를 사용
+
+## 1.3 Flask 객체 변수로부터 할 수 있는 작업들
+
+- Flask 클래스로부터 객체 생성이 완료되면, app 변수는 Flask 인스턴스를 담고 있는 객체 변수(인스턴스)로 취급된다.
+- Flask는 객체 변수로부터 다음 작업을 할 수 있다.
+
+1. 글로벌 객체 (`globalObject.py`)
+2. 사용자 응답 객체 생성 (`userResponseObject.py`)
