@@ -44,3 +44,4 @@ Flask(import_name, static_url_path, static_folder, template_folder)
 
 1. 글로벌 객체 (`globalObject.py`)
 2. 사용자 응답 객체 생성 (`userResponseObject.py`)
+3. HTTP 요청 전후에 대한 핸들러 관리 (`handlerManagement.py`)
