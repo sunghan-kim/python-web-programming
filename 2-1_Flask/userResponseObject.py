@@ -19,7 +19,9 @@
 
 # Flask의 기본 응답 객체로 사용되는 Response 클래스로부터 인스턴스 객체를 생성하고 브라우저에 응답
 from flask import Response, make_response
-from helloworld import app
+from flask import Flask
+
+app = Flask(__name__)
 
 
 # 1) response_class 응답 객체 생성

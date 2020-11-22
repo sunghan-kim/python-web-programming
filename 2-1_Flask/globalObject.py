@@ -8,7 +8,10 @@
 # - g 객체는 Flask 인스턴스 객체의 app_ctx_globals_class 클래스의 인스턴스 변수이다.
 from flask import g
 import sqlite3
-from helloworld import app
+from flask import Flask
+
+app = Flask(__name__)
+
 
 # - 일반적으로 Flask에서 제공하는 글로벌 객체는 웹 애플리케이션이 동작하는 동안 유지되어야 하는 값을 저장한다.
 #  - ex) 데이터베이스 연결 객체
