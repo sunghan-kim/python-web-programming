@@ -29,3 +29,14 @@ def board_view(article_idx):
 
 
 # URL 변수 기본값 할당
+# - route 데코레이터에 URL 변수를 포함한 URL을 전달하면, 웹 브라우저는 URL 변수를 포함해 URL을 호출해야만 오류가 발생하지 않는다.
+# - URL 변수는 기본값을 할당할 수 있다.
+# - 기본값이 할당된 URL은 웹 브라우저가 URL을 호출하면 URL 변수에 기본값을 제공한다.
+
+# 브라우저가 '/board/'를 호출한 경우 route 데코레이터는 1행에서 지정한 것 처럼 default 인자로 page 변수에 index를 넣도록 지시한다.
+# 그 결과 웹 애플리케이션은 최종적으로 '/board/index' 형태의 주소를 호출하는 것과 같은 효과를 지니게 된다.
+@app.route('/board', defaults={'page': 'index'})
+@app.route('/board/<page>')
+def board_default():
+    return ''
+
