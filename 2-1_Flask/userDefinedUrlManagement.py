@@ -46,7 +46,7 @@ app.url_map.converters['board'] = BoardView
 # 게시물 번호 부분
 #  - 산형 괄호(<, >)로 감싸고, 안의 내용은 콜론(:) 문자로 구분
 #  - 앞 부분 : URL 컨버터명
-#  - 뒷 부분 : 뷰 함수에 전달할 변수명 (여기서는 record라는 이름으로 받도록 지정
+#  - 뒷 부분 : 뷰 함수에 전달할 변수명 (여기서는 record라는 이름으로 받도록 지정)
 # url_for 함수에서 해당 URL을 쉽게 참조할 수 있도록 endpoint를 지정
 @app.route("/board/<board:record>", endpoint="view")
 # 뷰 함수 선언
