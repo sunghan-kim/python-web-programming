@@ -15,3 +15,11 @@
 #  10) pop
 #  11) poplist
 #  12) update
+
+
+# - Flask에서 request 모듈을 가져와서 사용하게 되는 args, form, values 객체에 저장되어 있는 MultiDict 데이터 타입은
+#   ImmutableMultiDict 타입이다.
+# - 따라서 이 데이터 타입은 객체의 내용을 수정하지 않는 get, getlist 메서드 등만 사용이 가능하고,
+#   add, pop 메서드 등을 사용할 경우 예외를 발생시키게 된다.
+# - 그러므로 Proxy 객체로 동작하는 flask.request 클래스에서 제공받는 args, form, values 객체에 영향을 주는 메서드 사용을
+#   하지 않도록 주의해야 한다.
